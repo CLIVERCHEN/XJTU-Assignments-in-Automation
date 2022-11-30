@@ -16,11 +16,8 @@ int D_algorithm::input2num(char* input)  // 将输入的位置转换为编码
 	}
 }
 
-int D_algorithm::Dijkstra(int p1, int p2)  // Dijkstra算法
+int D_algorithm::Dijkstra(int start, int end)  // Dijkstra算法
 {
-	int start, end;
-	start = p1;
-	end = p2;
 	if (start > end)  // 若编码后，起点对应的编码小于终点对应的编码，则交换二者位置，因为二者顺序对最短路径没有影响
 	{
 		int tmp = start;
@@ -81,7 +78,10 @@ void D_algorithm::output_path(int start, int end)  // 输出起点到终点的最短路径
 		cout << " " << "->" << " " << loc2num[end];
 	}
 
-	else if (start == end) cout << loc2num[end];
+	else if 
+	{
+		(start == end) cout << loc2num[end];
+	}
 
 	else  // 当起点编码小于终点编码时，则互换二者，调整递归中输出语句的位置，以实现逆向输出路径
 	{
