@@ -105,6 +105,12 @@ class SocialNetwork:
                     activatedNum = self.getActivateNum()
                     break
 
+                elif tmpMarginalGain >= self.getActivateNum(self.pq[0]) - activatedNum:
+                    self.seedSet.add(tmpNode)
+                    tmpNode.activateNode()
+                    activatedNum = self.getActivateNum()
+                    break
+
                 decay += 1
 
             activated_nums.append(activatedNum)
