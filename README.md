@@ -1,2 +1,0 @@
-# XJTU-Assignments-in-Automation
-//
